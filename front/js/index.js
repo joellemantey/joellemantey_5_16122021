@@ -58,15 +58,4 @@ const renderProduct = (product) => {
 
 })();
 
-// const main = async () => await getAllProducts();
-// main();
-
-// const str = "http://localhost:3000/images/kanap01.jpeg";
-// let url = new URL(str);
-// let search_params = new URLSearchParams(url.search);
-//
-// if (search_params.has('name')) {
-//     let name = search_params.get('name');
-//     console.log(name);
-// }
 
