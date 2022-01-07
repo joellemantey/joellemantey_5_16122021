@@ -45,8 +45,10 @@ const addToCart = (product) => {
             id: product._id,
             name: product.name,
             img: product.imageUrl,
+            imgAlt: product.altTxt,
             color: color.value,
             quantity: parseInt(quantity.value),
+            price: product.price,
         }
 
         // cherche un produit qui correspond au test
@@ -66,14 +68,14 @@ const addToCart = (product) => {
 
     console.log(cart);
 
-
-    // console.log(currentProduct);
-    // si id et color = id et color dans array alors quantity++
 }
 
-console.log(addToCart);
+let cart = [];
+let cartJson = localStorage.getItem('cart');
+if (cartJson != null){
+    cart = JSON.parse(cartJson);
+}
 
-const cart = [];
 (async function () {
     console.log("cart", cart);
 
